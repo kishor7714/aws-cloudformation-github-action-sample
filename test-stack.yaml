@@ -25,6 +25,8 @@ Resources:
       InstanceType: !Ref EC2InstanceType
       SecurityGroups:
         - !Ref HTTPSecurityGroup
+      SubnetId: subnet-0508938b1fa07493c
+        
 
   HTTPSecurityGroup:
     Type: AWS::EC2::SecurityGroup
@@ -39,3 +41,4 @@ Resources:
         FromPort: 443
         IpProtocol: tcp
         ToPort: 443
+      VpcId: vpc-026e91a53d134f46d
